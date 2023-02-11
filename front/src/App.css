@@ -161,12 +161,15 @@ section{
 }
 .contentBx h2{
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 300;
+
 }
 
 .contentBx h4{
   font-size: .2em;
   text-align: center;
+  font-weight: 300;
+
 }
 .btn{
   position: relative;
@@ -191,26 +194,84 @@ section{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 80px;
 }
 .title h2{
-  position: relative;
-  font-weight: 500;
   letter-spacing: 1px;
   color: black;
-}
-
-.title h2:before{
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  font-weight: 300;
+  margin-top: 100px;
 
 }
 
 p{
   text-align: justify;
 }
+
+.contentBox .postColumn{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  cursor: pointer;
+
+}
+@media (max-width: 991px){
+  .contentBox .postColumn{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.postBox{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+
+.imgBox{
+  min-height: 300px;
+}
+
+
+.textBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: .25s;
+  opacity: 0;
+  visibility: hidden;
+
+}
+.textBx h3{
+  font-weight: 400;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.more {
+  padding: 4px 10px;
+  background: #222;
+  color: white;
+}
+.postBox:hover .textBx{
+  opacity: .9;
+  visibility: visible;
+}
+
+
+
 
 
 
@@ -247,6 +308,7 @@ footer{
   flex-direction: column;
   background: #f8f8f8;
   border-top: 1px solid rgba(0,0,0,.05);
+  font-weight: 300;
 }
 .footer{
   display: flex;
